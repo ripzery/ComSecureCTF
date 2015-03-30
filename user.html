@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="img/user_agent_hacker_anonymous.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
+    <link rel="stylesheet" id="ppstyle" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Orbitron' rel='stylesheet' type='text/css'>
+    <script src="./js/jquery-2.1.0.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/blocs.js"></script>
+    <title>Welcome Admin !</title>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#password_id').keypress(function(e){
+                code= (e.keyCode ? e.keyCode : e.which);
+                if (code == 13) query();
+            });
+        });
+
+        function query(){
+            var id = $('#password_id').val();
+            $.ajax({
+                type: "POST",
+                url: "php/password.php",
+                data : {
+                  id: id
+                },
+                async: false,
+                success: function (return_value) {
+                    $('#output').text(return_value);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<!-- Main container -->
+<div class="page-container">
+
+    <!-- bloc-0 -->
+    <div>
+        <div class="bloc-lg mg-lg">
+            <div class="row mg-lg">
+
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4 mg-lg left-block text-center">
+                    <img src="img/map.jpg" class="img-responsive img-rounded mg-lg" alt="There&rsquo;s something behind this picture !" data-placement="left" data-toggle="tooltip" title="There&rsquo;s something behind this picture !" />
+                    <h2 class="text-center mg-lg ">
+                        Welcome, Admin !
+                    </h2>
+                    <h4 class=" text-center mg-lg">
+                        Enter the password id (ex. 1, 2, and so on)
+                    </h4>
+                    <div class="form-group">
+                        <!--sql injection?-->
+                        <input class="form-control text-center center-block" id="password_id" style="min-height: 56px; max-width: 400px;" placeholder="Password ID" />
+                        <div class="text-center">
+                            <a id="query" class="btn  btn-d" style="margin-top: 32px; margin-bottom: 16px;" onsubmit="query()" onclick="query()">query</a>
+                        </div>
+                    </div>
+
+                    <p class="mg-sm text-center">
+                       <strong>Hint :</strong>  Only one key can access the server.
+                        My flag is safe for sure!
+                        I can connect remotely to check it right now.
+                    </p>
+                </div>
+                <div class="col-sm-1"></div>
+
+                <div class="col-sm-5 mg-lg right-block">
+                    <h2 class="mg-md text-center">
+                        Output
+                    </h2>
+                    <label id="output">
+
+                    </label>
+                </div>
+
+                <div class="col-sm-1"></div>
+            </div>
+        </div>
+    </div>
+    <!-- bloc-0 END -->
+
+</div>
+<!-- Main container END -->
+
+</body>
+
+<!-- Google Analytics -->
+
+<!-- Google Analytics END -->
+
+</html>

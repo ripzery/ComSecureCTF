@@ -1,0 +1,104 @@
+/*-----------------------------------------------------------------------------------*/
+/*	    
+/*      Built with Blocs
+/*-----------------------------------------------------------------------------------*/
+
+body{
+    margin:0;
+    padding:0;
+    background:#2c3e50;
+    overflow-x:hidden;
+    -webkit-font-smoothing: antialiased;
+}
+a:hover{text-decoration: none; cursor:pointer;}
+
+
+/* Globals type styling */
+
+h1, h2, h3, h4, h5, h6, p, label, .btn, a, input{
+    font-family:"Orbitron", sans-serif;
+    color: #f8f8f8;
+}
+
+.left-block, .right-block{
+    background: #34495e;
+    border-radius: 8px;
+}
+
+
+/* Site container width */
+
+.container{
+    max-width:1170px;
+}
+
+/* Bloc sizes */
+
+.bloc-lg{
+    padding:24px 50px;
+}
+
+
+/* Bloc - Background Styles */
+
+/*.bg-center, .bg-l-edge,.bg-r-edge,.bg-t-edge,.bg-b-edge,.bg-tl-edge,.bg-bl-edge,.bg-tr-edge,.bg-br-edge{*/
+/*-webkit-background-size: auto;*/
+/*-moz-background-size: auto;*/
+/*-o-background-size: auto;*/
+/*background-size: auto;*/
+/*}*/
+/*.bg-repeat{*/
+/*background:repeat;*/
+/*}*/
+
+
+/* Custom bloc styling */
+
+#bloc-0,#bloc-1{
+    background-color:#FFF;
+}
+#bloc-0 h2{
+    font-size: 36px;
+    text-shadow: rgba(0, 0, 0, 0.298039) 0px 1px 2px;
+}
+#bloc-0 h3{
+    font-size: 20px;
+}
+
+/* Bloc image backgrounds */
+/*.bg-dots-bg{*/
+/*background-image:url('img/dots-bg.png');*/
+/*}*/
+
+/* Bric adjustment margins */
+
+.mg-md{
+    margin-top:10px;
+    margin-bottom:20px;
+}
+.mg-lg{
+    margin-top:10px;
+    margin-bottom:40px;
+}
+
+/* Buttons */
+
+.btn{
+    margin: 0 5px 5px 0;
+}
+.btn.pull-right{
+    margin: 0 0 5px 5px;
+}
+.btn-d,.btn-d:hover,.btn-d:focus{
+    color:#FFF!important;
+    background:rgba(0,0,0,.3);
+}
+
+
+/*Forms*/
+.form-control{
+    border-color:rgba(0,0,0,.1);
+    box-shadow:none;
+}
+
+
